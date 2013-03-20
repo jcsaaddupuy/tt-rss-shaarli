@@ -9,7 +9,7 @@ function shaarli(id) {
 	    onComplete: function(transport) {
 		var ti = JSON.parse(transport.responseText);
 		
-		var share_url = ti.shaarli_url + "?post="+ encodeURIComponent(ti.link)+ "&title="+encodeURIComponent(ti.title)+"&source=tt-rss";
+		var share_url = ti.shaarli_url + "?post="+ encodeURIComponent(ti.link)+ "&title="+encodeURIComponent(ti.title)+"&source=bookmarklet";
 		console.log(share_url);
 		window.open(share_url,'_blank','menubar=no,height=390,width=600,toolbar=no,scrollbars=no,status=no,dialog=1');
 		
