@@ -6,7 +6,7 @@ class Shaarli extends Plugin {
   private $host;
 
   function about() {
-    return array("1.7.5",
+    return array("1.75",
 		 "Shaare your links ! (Sebsauvage Shaarli : http://sebsauvage.net/wiki/doku.php?id=php:shaarli )",
 		 "jc.saaddupuy");
   }
