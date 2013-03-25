@@ -20,7 +20,7 @@ class Shaarli extends Plugin {
   }
 
   function save() {
-    $shaarli_url = db_escape_string($_POST["shaarli_url"]);
+    $shaarli_url = db_escape_string($this->link,$_POST["shaarli_url"]);
     $this->host->set($this, "shaarli", $shaarli_url);
     echo "Value set to $shaarli_url";
   }
@@ -75,7 +75,7 @@ class Shaarli extends Plugin {
   }
 
   function getShaarli() {
-    $id = db_escape_string($_REQUEST['id']);
+    $id = db_escape_string($this->link,$_REQUEST['id']);
 
     $result = db_query($this->link, "SELECT title, link
 		      FROM ttrss_entries, ttrss_user_entries
